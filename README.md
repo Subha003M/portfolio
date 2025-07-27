@@ -48,8 +48,7 @@ portfolio/
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-
+   git clone https://github.com/Subha003M/portfolio
 2. Open index.html in any browser.
 
     If you want to deploy:
@@ -58,7 +57,8 @@ portfolio/
 
 3.  Select the main branch as source and save.
 
-        Your site will be live on https://your-username.github.io/your-repo-name
+        Your site will be live on https://github.com/Subha003M/portfolio
+ ---
 
 🧠 Future Ideas
 
