@@ -1,254 +1,1299 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SUBHASHINI M Portfolio</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="Subhashini Mahendran — software development, Python automation and creative technology. Explore projects, experience and credentials." name="description"/>
+  <title>
+   Subhashini Mahendran | Developer Portfolio
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+   :root {
+  --bg: #070b14;
+  --panel: #101b2c;
+  --cyan: #62eaf4;
+  --muted: #9aaabc;
+  --line: #233448
+}
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: #f4f4f4;
-      line-height: 1.6;
-    }
+* {
+  box-sizing: border-box
+}
 
-    header {
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      text-align: center;
-      padding: 3rem 1rem;
-      position: relative;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-    }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px
+}
 
-    .header-content h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at 80% 8%, #12313c66, transparent 38%), var(--bg);
+  color: #eff7ff;
+  font: 15px/1.7 Inter, Arial, sans-serif
+}
 
-    .header-content h3 {
-      font-weight: 300;
-      margin-top: 0.5rem;
-      font-size: 1.2rem;
-      color: #cce7ff;
-    }
+h1,
+h2,
+h3 {
+  font-family: Outfit, Arial, sans-serif;
+  line-height: 1.12;
+  margin: 0 0 18px
+}
 
-    .profile-picture {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      border: 3px solid #00bcd4;
-      box-shadow: 0 0 15px rgba(0, 188, 212, 0.6);
-    }
+h1 {
+  font-size: clamp(45px, 6vw, 78px);
+  letter-spacing: -3px
+}
 
-    nav {
-      background: #003f5c;
-      text-align: center;
-      padding: 1rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
+h2 {
+  font-size: clamp(32px, 4vw, 46px);
+  letter-spacing: -1.4px
+}
 
-    nav ul {
-      list-style: none;
-    }
+h3 {
+  font-size: 23px
+}
 
-    nav ul li {
-      display: inline-block;
-      margin: 0 20px;
-    }
+p {
+  color: var(--muted)
+}
 
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: color 0.3s;
-    }
+a {
+  color: inherit;
+  text-decoration: none
+}
 
-    nav ul li a:hover {
-      color: #00bcd4;
-    }
+button {
+  font: inherit;
+  cursor: pointer
+}
 
-    .section-content {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(12px);
-      margin: 3rem auto;
-      padding: 2rem;
-      max-width: 950px;
-      border-radius: 20px;
-      box-shadow: 0 0 25px rgba(0, 188, 212, 0.1);
-    }
+button,
+a {
+  -webkit-tap-highlight-color: transparent
+}
 
-    .section-content h2 {
-      margin-bottom: 1rem;
-      color: #00bcd4;
-      border-bottom: 2px solid #00bcd4;
-      padding-bottom: 0.5rem;
-    }
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 5px
+}
 
-    .section-content ul {
-      list-style-type: square;
-      padding-left: 20px;
-      color: #e0f7fa;
-    }
+.wrap {
+  max-width: 1160px;
+  padding: 0 28px;
+  margin: auto
+}
 
-    .download-button {
-      background-color: #00bcd4;
-      color: #fff;
-      padding: 0.8rem 1.5rem;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s ease;
-      display: inline-block;
-    }
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--cyan)
+}
 
-    .download-button:hover {
-      background-color: #0097a7;
-    }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #070b14e8;
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid #ffffff0c
+}
 
-    .projects-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 1rem;
-    }
+.nav {
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
 
-    .project-card {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(8px);
-      border-radius: 15px;
-      padding: 1.5rem;
-      box-shadow: 0 0 20px rgba(0, 188, 212, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-      color: #fff;
-    }
+.brand {
+  font: 600 23px Outfit, sans-serif
+}
 
-    .project-card h3 {
-      margin-bottom: 0.5rem;
-      color: #00bcd4;
-    }
+.brand span {
+  color: var(--cyan)
+}
 
-    .project-card:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 12px 30px rgba(0, 188, 212, 0.3);
-    }
+nav {
+  display: flex;
+  gap: 25px;
+  font-size: 13px;
+  color: var(--muted)
+}
 
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #002f4c;
-      color: #ccc;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-    }
+nav a:hover,
+nav a.active {
+  color: var(--cyan)
+}
+
+.menu {
+  display: none;
+  color: white;
+  background: none;
+  border: 1px solid var(--line);
+  padding: 6px 12px;
+  border-radius: 8px
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: 65px;
+  align-items: center;
+  min-height: 690px;
+  padding: 80px 0
+}
+
+.hero p {
+  max-width: 570px;
+  font-size: 17px
+}
+
+.gradient {
+  background: linear-gradient(110deg, #a5f5fa, #22c9e9, #66a4ff);
+  background-clip: text;
+  color: transparent
+}
+
+.tag {
+  display: inline-flex;
+  border: 1px solid #65eaf433;
+  color: var(--cyan);
+  background: #62eaf408;
+  border-radius: 25px;
+  padding: 5px 13px;
+  font-size: 11px;
+  letter-spacing: .5px
+}
+
+.hero .eyebrow {
+  margin: 22px 0 16px
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 27px
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 8px;
+  padding: 13px 21px;
+  border: 1px solid #ffffff29;
+  background: transparent;
+  color: #eaf7ff;
+  font-weight: 600;
+  font-size: 13px
+}
+
+.primary {
+  background: var(--cyan);
+  border-color: var(--cyan);
+  color: #07121b;
+  box-shadow: 0 6px 30px #43dce71a
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--cyan)
+}
+
+.micro {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 29px;
+  color: var(--muted);
+  font-size: 11px
+}
+
+.micro span:before {
+  content: '✓';
+  color: var(--cyan);
+  margin-right: 7px
+}
+
+.identity {
+  position: relative;
+  background: linear-gradient(145deg, #173b4a, #0d1727 65%);
+  border: 1px solid #62eaf43d;
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 25px 80px #0008;
+  min-height: 430px;
+  overflow: hidden
+}
+
+.identity:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(#62eaf40a 1px, transparent 1px), linear-gradient(90deg, #62eaf40a 1px, transparent 1px);
+  background-size: 35px 35px;
+  pointer-events: none
+}
+
+.monogram {
+  font: 700 145px Outfit, sans-serif;
+  letter-spacing: -12px;
+  text-align: center;
+  padding: 22px 0;
+  color: #a6f7fc;
+  text-shadow: 0 0 60px #00d5ff55
+}
+
+.identity h3 {
+  font-size: 27px;
+  margin-bottom: 6px
+}
+
+.identity p {
+  margin: 0;
+  font-size: 12px
+}
+
+.identity .tag {
+  margin-top: 20px
+}
+
+.code {
+  font: 11px/1.8 monospace;
+  border-top: 1px solid #62eaf433;
+  margin-top: 20px;
+  padding-top: 15px;
+  color: #7ac9d3
+}
+
+.section {
+  padding: 82px 0;
+  border-top: 1px solid #ffffff0d
+}
+
+.section-head {
+  margin-bottom: 35px;
+  max-width: 700px
+}
+
+.section-head .eyebrow {
+  display: block;
+  margin-bottom: 14px
+}
+
+.section-head p {
+  margin: 0
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 65px
+}
+
+.about p {
+  margin: 0;
+  font-size: 17px
+}
+
+.filters {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-bottom: 26px
+}
+
+.filter {
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  background: #111b2b;
+  color: var(--muted);
+  padding: 8px 17px;
+  font-size: 12px
+}
+
+.filter[aria-pressed=true] {
+  background: var(--cyan);
+  color: #07121b;
+  border-color: var(--cyan)
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px
+}
+
+.project {
+  border: 1px solid #2b445b;
+  border-radius: 18px;
+  background: #0e1828;
+  overflow: hidden;
+  transition: transform .25s, border-color .25s
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  border-color: var(--cyan)
+}
+
+.project[hidden] {
+  display: none
+}
+
+.art {
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background: radial-gradient(ellipse at 50% 100%, #14677855, transparent 80%), #0b1422;
+  border-bottom: 1px solid #294051;
+  position: relative;
+  color: #77e2ed
+}
+
+.art .num {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  font: 10px monospace;
+  letter-spacing: 2px;
+  color: #7b9daf
+}
+
+.art .glyph {
+  font: 54px monospace;
+  border: 1px solid #62eaf438;
+  padding: 0 25px;
+  border-radius: 14px;
+  background: #62eaf408
+}
+
+.art .artlabel {
+  font: 12px monospace;
+  max-width: 130px;
+  letter-spacing: 2px
+}
+
+.project-body {
+  padding: 27px
+}
+
+.project h3 {
+  font-size: 24px
+}
+
+.project p {
+  font-size: 13px
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 20px 0
+}
+
+.tags span {
+  color: #9bdce5;
+  background: #62eaf40a;
+  border: 1px solid #62eaf420;
+  border-radius: 5px;
+  padding: 3px 9px;
+  font-size: 10px
+}
+
+details {
+  border-top: 1px solid #ffffff12;
+  padding-top: 15px;
+  font-size: 12px;
+  color: var(--muted)
+}
+
+summary {
+  color: var(--cyan);
+  cursor: pointer;
+  font-weight: 600
+}
+
+details p {
+  margin-bottom: 0
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px
+}
+
+.skill {
+  border: 1px solid var(--line);
+  background: #101a29;
+  border-radius: 16px;
+  padding: 24px
+}
+
+.skill .icon {
+  font: 23px monospace;
+  color: var(--cyan);
+  margin-bottom: 22px
+}
+
+.skill h3 {
+  font-size: 19px
+}
+
+.skill .tags {
+  margin-bottom: 0
+}
+
+.timeline {
+  border-left: 1px solid #2d6470;
+  margin-left: 8px;
+  padding-left: 34px
+}
+
+.entry {
+  position: relative;
+  margin-bottom: 35px
+}
+
+.entry:before {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 7px;
+  background: var(--cyan);
+  border: 4px solid #132a36;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%
+}
+
+.entry h3 {
+  font-size: 22px;
+  margin: 8px 0
+}
+
+.entry p {
+  margin: 5px 0;
+  font-size: 14px
+}
+
+.entry time {
+  font-size: 11px;
+  color: var(--cyan);
+  letter-spacing: 1px
+}
+
+.education {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px
+}
+
+.certs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px
+}
+
+.cert {
+  border-top: 2px solid #34616c;
+  padding: 22px 0
+}
+
+.cert h3 {
+  font-size: 18px
+}
+
+.cert p {
+  font-size: 12px
+}
+
+.resume {
+  border: 1px solid #35505b;
+  border-radius: 20px;
+  background: radial-gradient(at 95% 40%, #25606e66, transparent 70%), #0d1724;
+  display: grid;
+  grid-template-columns: 1.4fr .6fr;
+  gap: 30px;
+  padding: 50px;
+  align-items: center
+}
+
+.resume h2 {
+  margin-top: 20px
+}
+
+.resume-art {
+  font: 700 110px Outfit, sans-serif;
+  text-align: center;
+  color: #73d9e260
+}
+
+.resume-art small {
+  display: block;
+  font: 10px Inter, sans-serif;
+  letter-spacing: 4px;
+  color: var(--cyan)
+}
+
+.contact {
+  text-align: center;
+  max-width: 780px;
+  margin: auto
+}
+
+.contact .actions {
+  justify-content: center
+}
+
+.contact .btn {
+  overflow-wrap: anywhere;
+  max-width: 100%
+}
+
+.contact small {
+  display: block;
+  margin-top: 25px;
+  color: var(--muted)
+}
+
+footer {
+  border-top: 1px solid #ffffff0f;
+  padding: 25px 0;
+  color: #738399;
+  font-size: 11px
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px
+}
+
+dialog {
+  border: 1px solid #3a5b6e;
+  border-radius: 18px;
+  background: #0d1828;
+  color: #fff;
+  width: min(900px, 94vw);
+  padding: 25px;
+  max-height: 90vh
+}
+
+dialog::backdrop {
+  background: #02060de8;
+  backdrop-filter: blur(12px)
+}
+
+dialog .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px
+}
+
+dialog iframe {
+  width: 100%;
+  height: 65vh;
+  border: 0;
+  margin-top: 18px;
+  background: white
+}
+
+.intro {
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  background: radial-gradient(ellipse at 70% 25%, #173c48, #070b14 65%);
+  text-align: center
+}
+
+.intro .inside {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+
+.intro h2 {
+  font-size: clamp(48px, 11vw, 128px);
+  letter-spacing: -.06em;
+  margin: 30px 0 8px
+}
+
+.intro h3 {
+  font-size: clamp(14px, 3vw, 25px);
+  letter-spacing: .35em;
+  color: var(--cyan)
+}
+
+.intro p {
+  max-width: 520px;
+  margin: 25px auto
+}
+
+.skip {
+  float: right
+}
+
+.skiplink {
+  position: fixed;
+  top: -80px;
+  z-index: 100;
+  background: var(--cyan);
+  color: #07121b;
+  padding: 12px
+}
+
+.skiplink:focus {
+  top: 0
+}
+
+@media(max-width:850px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 55px 0
+  }
+
+  .identity {
+    max-width: 480px;
+    width: 100%;
+    margin: auto;
+    min-height: 0
+  }
+
+  .monogram {
+    font-size: 100px;
+    padding: 0
+  }
+
+  .about,
+  .education {
+    grid-template-columns: 1fr;
+    gap: 25px
+  }
+
+  .skills {
+    grid-template-columns: repeat(2, 1fr)
+  }
+
+  nav {
+    gap: 14px;
+    font-size: 11px
+  }
+
+  .resume {
+    padding: 30px
+  }
+
+  .hero h1 {
+    max-width: 650px
+  }
+}
+
+@media(max-width:600px) {
+  .wrap {
+    padding: 0 20px
+  }
+
+  .nav {
+    height: 66px
+  }
+
+  .menu {
+    display: block
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 66px;
+    left: 0;
+    right: 0;
+    background: #0c1727;
+    padding: 25px;
+    flex-direction: column;
+    font-size: 15px;
+    border-bottom: 1px solid var(--line)
+  }
+
+  nav.open {
+    display: flex
+  }
+
+  .hero {
+    padding: 42px 0
+  }
+
+  h1 {
+    letter-spacing: -1.7px
+  }
+
+  .section {
+    padding: 55px 0
+  }
+
+  .projects,
+  .skills,
+  .certs,
+  .resume {
+    grid-template-columns: 1fr
+  }
+
+  .resume-art {
+    display: none
+  }
+
+  .foot {
+    flex-direction: column
+  }
+
+  .contact .btn {
+    font-size: 11px;
+    padding: 12px
+  }
+
+  .intro {
+    padding: 20px
+  }
+
+  .intro h3 {
+    letter-spacing: .18em
+  }
+
+  .identity {
+    padding: 25px
+  }
+
+  .art {
+    height: 150px
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior: auto
+  }
+
+  * {
+    transition: none !important
+  }
+}
+
+.profile-photo {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 16px;
+  margin: 24px 0;
+}
   </style>
-</head>
-
-<body>
-
+ </head>
+ <body>
+  <a class="skiplink" href="#main">
+   Skip to content
+  </a>
   <header>
-    <img src="/assets/image.png" alt="Your Profile Picture" class="profile-picture">
-    <div class="header-content">
-      <h1>SUBHASHINI MAHENDRAN</h1>
-      <h3>Student | Developer | Tech Enthusiast</h3>
-    </div>
+   <div class="wrap nav">
+    <a class="brand" href="#home">
+     Subhashini
+     <span>
+      .
+     </span>
+    </a>
+    <button aria-controls="nav" aria-expanded="false" class="menu">
+     Menu
+    </button>
+    <nav aria-label="Main navigation" id="nav">
+     <a href="#home">
+      Home
+     </a>
+     <a href="#projects">
+      Work
+     </a>
+     <a href="#skills">
+      Skills
+     </a>
+     <a href="#experience">
+      Experience
+     </a>
+     <a href="#education">
+      Education
+     </a>
+     <a href="#resume">
+      Resume
+     </a>
+     <a href="#contact">
+      Contact
+     </a>
+    </nav>
+   </div>
   </header>
-
-  <nav>
-    <ul>
-      <li><a href="#About">About</a></li>
-      <li><a href="#Education">Education</a></li>
-      <li><a href="#Skills">Skills</a></li>
-      <li><a href="#Projects">Projects</a></li>
-      <li><a href="#Resume">Resume</a></li>
-    </ul>
-  </nav>
-
-  <section id="About" class="section-content">
-    <h2>About Me</h2>
-    <p>
-      Hello everyone! I’m Subhashini, an enthusiastic Computer Applications graduate with a passion for software development and emerging tech. Proficient in Python through academic projects, collaborative in team settings, and excited to drive innovation in software.
-    </p>
-  </section>
-
-  <section id="Education" class="section-content">
-    <h2>Education</h2>
-    <ul>
-      <li>Master of Computer Applications – Rathinam Technical Campus</li>
-      <li>Bachelor of Computer Applications – Idhaya College</li>
-    </ul>
-  </section>
-
-  <section id="Skills" class="section-content">
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>Languages:</strong> C, Python, HTML, CSS, JavaScript </li>
-      <li><strong>Tools and Framework:</strong> Tkinter, Power BI, Excel</li>
-      <li><strong>Database:</strong> MySql</li>
-    </ul>
-  </section>
-
-  <section id="Projects" class="section-content">
-    <h2>Projects</h2>
-    <div class="projects-container">
-      <div class="project-card">
-        <h3>💼 Portfolio Website</h3>
-        <p>Personal portfolio to showcase skills and projects using HTML, CSS, and JavaScript.</p>
-      </div>
-      <div class="project-card">
-        <h3>📁 File Organizer</h3>
-        <p>Python GUI app using Tkinter to organize files by type. Includes drag-and-drop support.</p>
-      </div>
-      <div class="project-card">
-        <h3>🖱️Virtual Mouse</h3>
-        <p>A Python project that emulates mouse functionality using real-time hand gestures.</p>
-      </div>
-      <div class="project-card">
-        <h3>📍Location Tracker</h3>
-        <p>A location tracker web app that uses JavaScript’s Geolocation API to fetch and display the user's real-time position in the browser.</p>
-      </div>
+  <main class="wrap" id="main">
+   <section class="hero" id="home">
+    <div>
+     <span class="tag">
+      PYTHON · AUTOMATION · SOFTWARE DEVELOPMENT
+     </span>
+     <p class="eyebrow">
+      Subhashini Mahendran / The developer series
+     </p>
+     <h1>
+      Turning ideas into
+      <br/>
+      <span class="gradient">
+       thoughtful software.
+      </span>
+     </h1>
+     <p>
+      I'm Subhashini, a Computer Applications graduate building with Python, automation and web technologies. Curious about what's next. Focused on making it work.
+     </p>
+     <div class="actions">
+      <a class="btn primary" href="#projects">
+       Explore my work
+       <span>
+        ↗
+       </span>
+      </a>
+      <button class="btn" data-resume="">
+       View resume ↓
+      </button>
+     </div>
+     <div class="micro">
+      <span>
+       Python &amp; PowerShell
+      </span>
+      <span>
+       MCA · 2024–2026
+      </span>
+      <span>
+       Sivagangai, Tamil Nadu
+      </span>
+     </div>
     </div>
-  </section>
-
-  <section id="Resume" class="section-content">
-    <h2>Resume</h2>
-   <center><a class="download-button" href="/assets/subha_resume.pdf" download>📄 Download Resume</a></center>
-  </section>
-
+    <aside aria-label="Subhashini developer profile" class="identity">
+     <span class="eyebrow">
+      Developer profile / 01
+     </span>
+     <img alt="Subhashini Mahendran" class="profile-photo" src="assets/image.png"/>
+     <h3>
+      Subhashini Mahendran
+     </h3>
+     <p>
+      Software development &amp; automation
+     </p>
+     <div class="code">
+      &gt; build. automate. learn.
+      <br/>
+      &gt; ideas → code → possibilities
+     </div>
+     <span class="tag">
+      Python   /   Web   /   Cloud
+     </span>
+    </aside>
+   </section>
+   <section class="section about" id="about">
+    <div>
+     <span class="eyebrow">
+      01 / Behind the code
+     </span>
+     <h2 style="margin-top:15px">
+      Curiosity, translated
+      <br/>
+      into code.
+     </h2>
+    </div>
+    <p>
+     I'm an enthusiastic Computer Applications graduate with a strong interest in software development and emerging technologies. My work spans Python automation, gesture-based interaction, cloud uploads and quantum-resistant security. I enjoy learning through projects and collaborating with teams to turn technical ideas into practical solutions.
+    </p>
+   </section>
+   <section class="section" id="projects">
+    <div class="section-head">
+     <span class="eyebrow">
+      02 / Selected work
+     </span>
+     <h2>
+      Every project. A new possibility.
+     </h2>
+     <p>
+      A collection of experiments and applications across software, automation and the web.
+     </p>
+    </div>
+    <div aria-label="Filter projects" class="filters">
+     <button aria-pressed="true" class="filter" data-filter="all">
+      All projects
+     </button>
+     <button aria-pressed="false" class="filter" data-filter="python">
+      Python
+     </button>
+     <button aria-pressed="false" class="filter" data-filter="web">
+      Web &amp; Cloud
+     </button>
+     <button aria-pressed="false" class="filter" data-filter="security">
+      Security
+     </button>
+    </div>
+    <div class="projects" id="project-grid">
+    </div>
+   </section>
+   <section class="section" id="skills">
+    <div class="section-head">
+     <span class="eyebrow">
+      03 / The toolkit
+     </span>
+     <h2>
+      Tools behind the work.
+     </h2>
+     <p>
+      The languages, platforms and workflows I use to build and explore.
+     </p>
+    </div>
+    <div class="skills" id="skill-grid">
+    </div>
+   </section>
+   <section class="section" id="experience">
+    <div class="section-head">
+     <span class="eyebrow">
+      04 / In practice
+     </span>
+     <h2>
+      From learning to building.
+     </h2>
+    </div>
+    <div class="timeline">
+     <article class="entry">
+      <time>
+       MAR 2026 — JUN 2026
+      </time>
+      <h3>
+       Associate Software Developer Intern
+      </h3>
+      <p style="color:#d7e7f0">
+       Infinite Computer Solutions · Bangalore
+      </p>
+      <p>
+       Built and deployed AI-powered automation workflows using Python, PowerShell and CI/CD practices to improve operational efficiency and accelerate development processes.
+      </p>
+      <div class="tags">
+       <span>
+        Python
+       </span>
+       <span>
+        PowerShell
+       </span>
+       <span>
+        CI/CD
+       </span>
+       <span>
+        Automation
+       </span>
+      </div>
+     </article>
+    </div>
+   </section>
+   <section class="section" id="education">
+    <div class="section-head">
+     <span class="eyebrow">
+      05 / Foundations
+     </span>
+     <h2>
+      A foundation for what's next.
+     </h2>
+    </div>
+    <div class="education">
+     <div class="timeline">
+      <article class="entry">
+       <time>
+        2024 — 2026
+       </time>
+       <h3>
+        Master of Computer Applications
+       </h3>
+       <p>
+        Rathinam Technical Campus, Coimbatore
+        <br/>
+        Anna University
+       </p>
+       <span class="tag">
+        CGPA 8.4 / 10
+       </span>
+      </article>
+      <article class="entry">
+       <time>
+        2021 — 2024
+       </time>
+       <h3>
+        Bachelor of Computer Applications
+       </h3>
+       <p>
+        Idhaya College for Women, Sarugani
+        <br/>
+        Alagappa University
+       </p>
+       <span class="tag">
+        CGPA 8.7 / 10
+       </span>
+      </article>
+     </div>
+     <div class="timeline">
+      <article class="entry">
+       <time>
+        2018 — 2021
+       </time>
+       <h3>
+        School education
+       </h3>
+       <p>
+        Christhuraja Matric Higher Secondary School, Thirupathur
+       </p>
+       <div class="tags">
+        <span>
+         HSC · 94%
+        </span>
+        <span>
+         SSLC · 91%
+        </span>
+       </div>
+      </article>
+     </div>
+    </div>
+    <h3 style="margin-top:30px">
+     Continued learning
+    </h3>
+    <div class="certs">
+     <article class="cert">
+      <span class="eyebrow">
+       01 / Python
+      </span>
+      <h3 style="margin-top:18px">
+       Crash Course on Python
+      </h3>
+      <p>
+       NPTEL · 2025
+      </p>
+     </article>
+     <article class="cert">
+      <span class="eyebrow">
+       02 / Analytics
+      </span>
+      <h3 style="margin-top:18px">
+       Data Analysis Foundations
+      </h3>
+      <p>
+       Coursera · 2022
+      </p>
+     </article>
+     <article class="cert">
+      <span class="eyebrow">
+       03 / Business intelligence
+      </span>
+      <h3 style="margin-top:18px">
+       Data Analytics using Power BI
+      </h3>
+      <p>
+       IBM
+      </p>
+     </article>
+    </div>
+   </section>
+   <section class="section" id="resume">
+    <div class="resume">
+     <div>
+      <span class="eyebrow">
+       The story so far / Special feature
+      </span>
+      <h2>
+       Behind the
+       <span class="gradient">
+        code.
+       </span>
+      </h2>
+      <p>
+       Explore my experience, education, projects and technical skills in one place.
+      </p>
+      <div class="actions">
+       <button class="btn primary" data-resume="">
+        View resume ↗
+       </button>
+       <a class="btn" download="" href="assets/subha_resume.pdf">
+        Download PDF ↓
+       </a>
+      </div>
+     </div>
+     <div aria-hidden="true" class="resume-art">
+      SM
+      <small>
+       THE DEVELOPER SERIES
+      </small>
+     </div>
+    </div>
+   </section>
+   <section class="section contact" id="contact">
+    <span class="eyebrow">
+     06 / Start a conversation
+    </span>
+    <h2 style="margin-top:20px">
+     Let's build something
+     <br/>
+     <span class="gradient">
+      worth sharing.
+     </span>
+    </h2>
+    <p>
+     Have a project, an opportunity or an idea? I'd love to hear from you.
+    </p>
+    <div class="actions">
+     <a class="btn primary" href="mailto:subhamahendran003@gmail.com">
+      subhamahendran003@gmail.com ↗
+     </a>
+     <a class="btn" href="https://www.linkedin.com/in/subhamahendran" rel="noopener noreferrer" target="_blank">
+      LinkedIn ↗
+     </a>
+    </div>
+    <small>
+     Sivagangai, Tamil Nadu · India
+    </small>
+   </section>
+  </main>
   <footer>
-    <p>&copy; 2025 Subhashini Mahendran. All rights reserved.</p>
+   <div class="wrap foot">
+    <span>
+     ©
+     <span id="year">
+     </span>
+     Subhashini Mahendran
+    </span>
+    <a href="#home">
+     Back to top ↑
+    </a>
+   </div>
   </footer>
-
+  <dialog aria-labelledby="resume-title" id="resume-dialog">
+   <div class="top">
+    <h3 id="resume-title" style="margin:0">
+     Subhashini · Resume
+    </h3>
+    <button class="btn" data-close="">
+     Close ×
+    </button>
+   </div>
+   <iframe data-src="assets/subha_resume.pdf" title="Subhashini resume PDF">
+   </iframe>
+   <a class="btn" href="assets/subha_resume.pdf" rel="noopener" target="_blank">
+    Open PDF in a new tab ↗
+   </a>
+  </dialog>
+  <dialog aria-labelledby="intro-title" class="intro" id="intro">
+   <button class="btn skip" id="skip">
+    Skip intro ↗
+   </button>
+   <div class="inside">
+    <span class="eyebrow">
+     A developer original
+    </span>
+    <h2 id="intro-title">
+     SUBHASHINI
+    </h2>
+    <h3>
+     THE DEVELOPER SERIES
+    </h3>
+    <p>
+     Every idea starts with curiosity.
+     <br/>
+     Explore the projects, learning and code behind mine.
+    </p>
+    <button class="btn primary" id="enter">
+     Explore the series →
+    </button>
+   </div>
+  </dialog>
   <script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 50,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-  </script>
+   const projects = [
+  ['security', '01', '◇', 'SECURE SYSTEMS', 'Quantum-Resistant Security Framework', 'A PQC-based security framework with blockchain integration, designed to protect Digital Twin systems from quantum computing threats.', ['PQC', 'Blockchain', 'ML'], 'Implemented decentralized verification and tamper-resistant data validation for secure communication.'],
+  ['python', '02', '⌁', 'GESTURE CONTROL', 'Virtual Mouse', 'A real-time hand gesture recognition system that controls the mouse cursor through webcam input.', ['Python', 'OpenCV'], 'Implemented gesture-based clicks and scrolling to enable hands-free human-computer interaction.'],
+  ['web', '03', '↑', 'CLOUD TRANSFER', 'Cloud Stream Uploader', 'A cloud-based file upload system with secure streaming and real-time upload progress.', ['JavaScript', 'Firebase / AWS', 'APIs'], 'Integrated cloud storage and API-based data handling to support file uploads and visible upload progress.'],
+  ['python', '04', '▤', 'FILE AUTOMATION', 'File Organizer', 'A Python desktop application that helps organize files by type through a simple graphical interface.', ['Python', 'Tkinter'], 'Includes drag-and-drop support, making it easier to sort files through the desktop interface.'],
+  ['web', '05', '⌖', 'BROWSER LOCATION', 'Location Tracker', 'A web application that uses the browser’s Geolocation API to display the user’s position.', ['JavaScript', 'Geolocation API'], 'Retrieves location with browser permission and displays the resulting position in the web interface.'],
+  ['web', '06', '</>', 'PERSONAL WEB', 'Portfolio Website', 'A personal space to present my skills, projects, education and development journey.', ['HTML', 'CSS', 'JavaScript'], 'Responsive sections, project filtering and an integrated resume viewer make the portfolio easy to explore.']
+];
+document.querySelector('#project-grid').innerHTML = projects.map(([cat, n, g, l, t, d, tags, more]) => `<article class="project" data-category="${cat}"><div class="art" aria-hidden="true"><span class="num">PROJECT / ${n}</span><span class="glyph">${g==='</>'?'&lt;/&gt;':g}</span><span class="artlabel">${l}</span></div><div class="project-body"><h3>${t}</h3><p>${d}</p><div class="tags">${tags.map(v=>`<span>${v}</span>`).join('')}</div><details><summary>Explore project</summary><p>${more}</p></details></div></article>`).join('');
+const skills = [
+  ['{ }', 'Programming', ['Python', 'C', 'Core Java']],
+  ['>_', 'Automation', ['Python Automation', 'PowerShell']],
+  ['</>', 'Web development', ['HTML', 'CSS', 'JavaScript']],
+  ['↗', 'Development workflow', ['Git', 'GitHub', 'CI/CD Pipelines']],
+  ['▦', 'Databases', ['SQL', 'MySQL', 'MongoDB']],
+  ['⌘', 'Tools & interfaces', ['Tkinter', 'Power BI', 'Excel']]
+];
+document.querySelector('#skill-grid').innerHTML = skills.map(([i, t, a]) => `<article class="skill"><div class="icon" aria-hidden="true">${i==='</>'?'&lt;/&gt;':i}</div><h3>${t}</h3><div class="tags">${a.map(x=>`<span>${x}</span>`).join('')}</div></article>`).join('');
+document.querySelectorAll('[data-filter]').forEach(b => b.onclick = () => {
+  document.querySelectorAll('[data-filter]').forEach(x => x.setAttribute('aria-pressed', x === b));
+  document.querySelectorAll('[data-category]').forEach(p => p.hidden = b.dataset.filter !== 'all' && p.dataset.category !== b.dataset.filter)
+});
+const nav = document.querySelector('nav'),
+  menu = document.querySelector('.menu');
+menu.onclick = () => {
+  menu.setAttribute('aria-expanded', nav.classList.toggle('open'))
+};
+nav.querySelectorAll('a').forEach(a => a.onclick = () => {
+  nav.classList.remove('open');
+  menu.setAttribute('aria-expanded', 'false')
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    nav.classList.remove('open');
+    menu.setAttribute('aria-expanded', 'false')
+  }
+});
+const rd = document.querySelector('#resume-dialog');
+document.querySelectorAll('[data-resume]').forEach(b => b.onclick = () => {
+  rd.querySelector('iframe').src = rd.querySelector('iframe').dataset.src;
+  rd.showModal()
+});
+document.querySelector('[data-close]').onclick = () => rd.close();
+const intro = document.querySelector('#intro');
 
-</body>
+function finish() {
+  intro.close();
+  try {
+    sessionStorage.setItem('subha-intro', 'seen')
+  } catch {}
+}
+document.querySelector('#enter').onclick = finish;
+document.querySelector('#skip').onclick = finish;
+intro.addEventListener('cancel', finish);
+try {
+  if (!sessionStorage.getItem('subha-intro')) intro.showModal()
+} catch {}
+document.querySelector('#year').textContent = new Date().getFullYear();
+const observer = new IntersectionObserver(entries => entries.forEach(e => {
+  if (e.isIntersecting) {
+    nav.querySelectorAll('a').forEach(a => a.classList.toggle('active', a.hash === '#' + e.target.id))
+  }
+}), {
+  rootMargin: '-15% 0px -60% 0px'
+});
+document.querySelectorAll('main section[id]').forEach(s => observer.observe(s));
+  </script>
+ </body>
 </html>
